@@ -70,7 +70,7 @@ export default function Home() {
               Get a quick and easy overview of your agile sprints with our app.
               Simply upload your sprint data and our app will generate a
               customized video summary, highlighting key metrics and
-              accomplishments. Stay on top of your team's progress and make
+              accomplishments. Stay on top of your team&apos;s progress and make
               informed decisions with our user-friendly video summaries.
             </Text>
           </View>
@@ -90,6 +90,7 @@ export default function Home() {
               />
               {goals.map((goal, gIndex) => (
                 <View
+                  key={`goal-${gIndex}`}
                   backgroundColor="background"
                   flexDirection="column"
                   boxShadow="strong"
@@ -115,6 +116,7 @@ export default function Home() {
                     </Text>
                     {(goal?.points || []).map((_, pIndex) => (
                       <Field
+                        key={`goal-${gIndex}-${pIndex}`}
                         component={TextInput}
                         label={`Point ${pIndex + 1}`}
                         name={`goal-${gIndex}-point-${pIndex}`}

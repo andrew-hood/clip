@@ -17,9 +17,13 @@ export const Feature = ({
         {points.map((point, index) => {
           const style = index % 2 === 0 ? { top: 300 } : { bottom: 300 };
           return (
-            <View position="absolute" paddingX={8} css={{ ...style }}>
+            <View
+              key={index}
+              position="absolute"
+              paddingX={8}
+              css={{ ...style }}
+            >
               <Text
-                key={index}
                 color="white"
                 padding={6}
                 fontSize={8}

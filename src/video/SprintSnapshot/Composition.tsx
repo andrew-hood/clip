@@ -62,11 +62,9 @@ export const SprintSnapshotComposition = ({ data }: { data: any }) => {
       <Audio src={staticFile("/audio/tropical-house.mp3")} />
       <Series>
         {scenes.map(({ component, duration }, index) => (
-          <Series.Sequence
-            key={index}
-            durationInFrames={duration * fps}
-            children={component}
-          />
+          <Series.Sequence key={index} durationInFrames={duration * fps}>
+            {component}
+          </Series.Sequence>
         ))}
       </Series>
     </AbsoluteFill>
