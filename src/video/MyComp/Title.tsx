@@ -1,5 +1,4 @@
-import { interpolate } from "remotion";
-import { useCurrentFrame } from "remotion";
+import { interpolate, useCurrentFrame } from "remotion";
 import React from "react";
 
 export const Title = ({ title }: { title: string }) => {
@@ -9,7 +8,10 @@ export const Title = ({ title }: { title: string }) => {
     extrapolateRight: "clamp",
   });
   return (
-    <div style={{ opacity }} className="text-gray-700 text-5xl font-bold leading-relaxed">
+    <div
+      style={{ opacity }}
+      className="text-gray-700 text-5xl font-bold leading-relaxed"
+    >
       {title}
     </div>
   );
