@@ -1,17 +1,31 @@
-import { AbsoluteFill, Img, Video, staticFile } from "remotion";
+import {
+  AbsoluteFill,
+  Img,
+  Video,
+  interpolate,
+  useCurrentFrame,
+  useVideoConfig,
+} from "remotion";
 import { FadeInList } from "../effects/FadeInList";
 import { Text, View } from "@go1d/go1d";
 
 export const Feature = ({
   points,
-  image,
+  file,
 }: {
   points: string[];
-  image: string;
+  file: string;
 }) => {
+  const frame = useCurrentFrame();
+  const { durationInFrames } = useVideoConfig();
+
+  const zoom = interpolate(frame, [0, durationInFrames], [1, 1.5], {
+    extrapolateLeft: "clamp",
+  });
+
   return (
     <AbsoluteFill className="bg-slate-100 items-center justify-center">
-      {/* <Img src={staticFile('/screenshots/screenshot1.png')} /> */}
+      {!!file && <Img src={file} style={{ transform: `scale(${zoom})` }} />}
       {/* <Video src={staticFile("/videos/screencast.mp4")} /> */}
       <FadeInList>
         {points.map((point, index) => {

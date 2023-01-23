@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Container } from "@/components/Container";
+import { Container } from "@/components/layout/Container";
 import backgroundImage from "@/images/background.jpg";
 
 export function Hero() {

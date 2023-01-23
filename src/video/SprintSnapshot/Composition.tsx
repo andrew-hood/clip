@@ -44,13 +44,13 @@ export const SprintSnapshotComposition = ({ data }: { data: any }) => {
           duration: 4,
         },
         {
-          component: <Feature points={goal?.points || []} image="" />,
+          component: <Feature points={goal?.points || []} file={goal.file} />,
           duration: 8,
         },
       ]),
       {
         component: <Outro />,
-        duration: 3,
+        duration: 5,
       },
     ];
 
@@ -59,7 +59,7 @@ export const SprintSnapshotComposition = ({ data }: { data: any }) => {
 
   return (
     <AbsoluteFill className="bg-gray-100 items-center justify-center">
-      <Audio src={staticFile("/audio/tropical-house.mp3")} />
+      {!!data.audio && <Audio src={staticFile(`/audio/${data.audio}`)} />}
       <Series>
         {scenes.map(({ component, duration }, index) => (
           <Series.Sequence key={index} durationInFrames={duration * fps}>

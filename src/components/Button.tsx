@@ -5,6 +5,7 @@ import { PropsWithChildren } from "react";
 interface Props {
   href?: string;
   className?: string;
+  onClick?: () => void;
 }
 
 export function Button({

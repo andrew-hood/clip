@@ -2,7 +2,6 @@ import {
   AbsoluteFill,
   Img,
   interpolate,
-  staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
@@ -39,9 +38,8 @@ export const FeatureTitle = ({
           opacity: 0.3,
         }}
         src={
-          image
-            ? staticFile(image)
-            : "https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
+          image ||
+          "https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
         }
       />
     </AbsoluteFill>
