@@ -5,42 +5,151 @@ import backgroundImage from "@/images/background.jpg";
 
 export function Hero() {
   return (
-    <div className="relative pt-10 pb-20 sm:py-24">
-      <div className="absolute inset-x-0 -top-48 -bottom-14 overflow-hidden bg-indigo-50">
-        <Image
-          className="absolute top-0 left-0 translate-y-[-10%] translate-x-[-55%] -scale-x-100 sm:left-1/2 sm:translate-y-[-6%] sm:translate-x-[-98%] lg:translate-x-[-106%] xl:translate-x-[-122%]"
-          src={backgroundImage}
-          alt=""
-          width={918}
-          height={1495}
-          priority
-          unoptimized
-        />
-        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white" />
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white" />
+    <div className="relative overflow-hidden bg-white">
+      <div
+        className="hidden lg:absolute lg:inset-0 lg:block"
+        aria-hidden="true"
+      >
+        <svg
+          className="absolute top-0 left-1/2 translate-x-64 -translate-y-8 transform"
+          width={640}
+          height={784}
+          fill="none"
+          viewBox="0 0 640 784"
+        >
+          <defs>
+            <pattern
+              id="9ebea6f4-a1f5-4d96-8c4e-4c2abf658047"
+              x={118}
+              y={0}
+              width={20}
+              height={20}
+              patternUnits="userSpaceOnUse"
+            >
+              <rect
+                x={0}
+                y={0}
+                width={4}
+                height={4}
+                className="text-gray-200"
+                fill="currentColor"
+              />
+            </pattern>
+          </defs>
+          <rect
+            y={72}
+            width={640}
+            height={640}
+            className="text-gray-50"
+            fill="currentColor"
+          />
+          <rect
+            x={118}
+            width={404}
+            height={784}
+            fill="url(#9ebea6f4-a1f5-4d96-8c4e-4c2abf658047)"
+          />
+        </svg>
       </div>
-      <Container className="relative">
-        <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
-          <h1 className="font-display text-5xl font-bold tracking-tighter text-teal-400 sm:text-7xl">
-            Clip is a suite of tools for video content creation
-          </h1>
-          <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-slate-900">
-            <p>
-              Introducing AI-powered video creation for businesses! Our
-              state-of-the-art tools and technology make it easy for you to
-              generate professional-quality videos with minimal effort. From
-              product demos and explainer videos to social media content and
-              marketing materials, our automated platform can handle it all.
-            </p>
-            <p>
-              Say goodbye to expensive production costs and time-consuming
-              editing processes – our AI-driven solutions deliver high-quality
-              results in a fraction of the time. Upgrade your video strategy
-              today with our cutting-edge technology.
-            </p>
+
+      <div className="relative pt-6 pb-16 sm:pb-24 lg:pb-32">
+        <Container className="mt-16 sm:mt-24 lg:mt-32">
+          <div className="lg:grid lg:grid-cols-12 lg:gap-8">
+            <div className="sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:text-left">
+              <h1>
+                <span className="block text-base font-semibold text-gray-500 sm:text-lg lg:text-base xl:text-lg">
+                  Built by APH Lab
+                </span>
+                <span className="mt-1 block text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl">
+                  <span className="block text-gray-900">Videos built with</span>
+                  <span className="block text-teal-400">React Code</span>
+                </span>
+              </h1>
+              <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                Introducing Clip, the revolutionary tool that allows you to
+                create stunning videos using just code. With a user-friendly
+                interface and a wide range of templates and effects, it's never
+                been easier to bring your video ideas to life.
+              </p>
+            </div>
+            <div className="relative mt-12 sm:mx-auto sm:max-w-lg lg:col-span-6 lg:mx-0 lg:mt-0 lg:flex lg:max-w-none lg:items-center">
+              <svg
+                className="absolute top-0 left-1/2 origin-top -translate-x-1/2 -translate-y-8 scale-75 transform sm:scale-100 lg:hidden"
+                width={640}
+                height={784}
+                fill="none"
+                viewBox="0 0 640 784"
+                aria-hidden="true"
+              >
+                <defs>
+                  <pattern
+                    id="4f4f415c-a0e9-44c2-9601-6ded5a34a13e"
+                    x={118}
+                    y={0}
+                    width={20}
+                    height={20}
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <rect
+                      x={0}
+                      y={0}
+                      width={4}
+                      height={4}
+                      className="text-gray-200"
+                      fill="currentColor"
+                    />
+                  </pattern>
+                </defs>
+                <rect
+                  y={72}
+                  width={640}
+                  height={640}
+                  className="text-gray-50"
+                  fill="currentColor"
+                />
+                <rect
+                  x={118}
+                  width={404}
+                  height={784}
+                  fill="url(#4f4f415c-a0e9-44c2-9601-6ded5a34a13e)"
+                />
+              </svg>
+              <div className="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
+                <button
+                  type="button"
+                  className="relative block w-full overflow-hidden rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+                >
+                  <span className="sr-only">Watch our video to learn more</span>
+                  <img
+                    className="w-full"
+                    src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    alt=""
+                  />
+                  <span
+                    className="absolute inset-0 flex h-full w-full items-center justify-center"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      className="h-20 w-20 text-teal-500"
+                      fill="currentColor"
+                      viewBox="0 0 84 84"
+                    >
+                      <circle
+                        opacity="0.9"
+                        cx={42}
+                        cy={42}
+                        r={42}
+                        fill="white"
+                      />
+                      <path d="M55.5039 40.3359L37.1094 28.0729C35.7803 27.1869 34 28.1396 34 29.737V54.263C34 55.8604 35.7803 56.8131 37.1094 55.9271L55.5038 43.6641C56.6913 42.8725 56.6913 41.1275 55.5039 40.3359Z" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
     </div>
   );
 }

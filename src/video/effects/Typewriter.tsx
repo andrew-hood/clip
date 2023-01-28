@@ -1,5 +1,5 @@
 import React from "react";
-import { Sequence, useCurrentFrame, useVideoConfig } from "remotion";
+import { useCurrentFrame, useVideoConfig } from "remotion";
 
 const cursor: React.CSSProperties = {
   height: 40,
@@ -14,16 +14,18 @@ export const Typewriter = ({
   text,
   delay = 0,
   delimiter = "",
+  duration,
 }: {
   text: string;
   delay?: number;
   delimiter?: string;
+  duration?: number;
 }) => {
   const frame = useCurrentFrame();
   const { durationInFrames, fps } = useVideoConfig();
 
   const items = text.split(delimiter);
-  const itemDuration = (durationInFrames * 0.6) / items.length;
+  const itemDuration = ((duration || durationInFrames) * 0.6) / items.length;
 
   // A new character every 3 frames
   const charsShown = Math.max(0, Math.floor(frame / itemDuration) - delay);

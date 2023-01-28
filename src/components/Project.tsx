@@ -1,6 +1,17 @@
 import React, { PropsWithChildren } from "react";
 
-export const Project = ({ children }: PropsWithChildren) => {
+interface Props {
+  label: string;
+  title: string;
+  description: string;
+}
+
+export const Project = ({
+  label,
+  title,
+  description,
+  children,
+}: PropsWithChildren<Props>) => {
   return (
     <div className="relative overflow-hidden bg-gray-800">
       <div
@@ -42,20 +53,17 @@ export const Project = ({ children }: PropsWithChildren) => {
                   <div className="hidden sm:mb-4 sm:flex sm:justify-center lg:justify-start">
                     <div className="flex items-center rounded-full bg-gray-900 p-1 text-white hover:text-gray-200 sm:text-base lg:text-sm xl:text-base">
                       <span className="rounded-full bg-teal-400 px-3 py-0.5 text-sm font-semibold leading-5 text-white">
-                        Sprint Shot
+                        {label}
                       </span>
-                      {/* <ChevronRightIcon className="ml-2 h-5 w-5 text-gray-500" aria-hidden="true" /> */}
                     </div>
                   </div>
                   <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-                    Capture your sprint goals and share it
+                    {title}
                   </h1>
                   <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                    Sprint Shot auto generates a video of what you accomplished
-                    in your sprint. Share what your team achieved to the rest of
-                    your company and more.
+                    {description}
                   </p>
-                  <div className="mt-8 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
+                  {/* <div className="mt-8 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
                     <div className="flex flex-wrap items-start justify-between">
                       <div className="flex justify-center px-1">
                         <img
@@ -79,7 +87,7 @@ export const Project = ({ children }: PropsWithChildren) => {
                         />
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="mt-16 sm:mt-24 lg:col-span-6 lg:mt-0">

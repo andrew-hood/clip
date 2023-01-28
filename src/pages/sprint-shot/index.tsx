@@ -29,7 +29,11 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <Project>
+        <Project
+          label="Sprint Shot"
+          title="Capture your sprint goals and share it"
+          description="Sprint Shot auto generates a video of what you accomplished your sprint. Share what your team achieved to the rest of your company and more."
+        >
           <SlideOver label="New Video">
             <SprintForm onSave={({ id }) => push(`/sprint-shot/${id}`)} />
           </SlideOver>

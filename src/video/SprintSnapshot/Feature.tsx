@@ -8,6 +8,7 @@ import {
 } from "remotion";
 import { FadeInList } from "../effects/FadeInList";
 import { Text, View } from "@go1d/go1d";
+import { useMemo } from "react";
 
 export const Feature = ({
   points,
@@ -23,10 +24,18 @@ export const Feature = ({
     extrapolateLeft: "clamp",
   });
 
+  const fileType = useMemo(() => {
+    return file.includes(".mp4?") ? "video" : "image";
+  }, [file]);
+
   return (
     <AbsoluteFill className="bg-slate-100 items-center justify-center">
-      {!!file && <Img src={file} style={{ transform: `scale(${zoom})` }} />}
-      {/* <Video src={staticFile("/videos/screencast.mp4")} /> */}
+      {fileType === "image" && (
+        <Img src={file} style={{ transform: `scale(${zoom})` }} />
+      )}
+      {fileType === "video" && (
+        <Video src={file} style={{ transform: `scale(${zoom})` }} />
+      )}
       <FadeInList>
         {points.map((point, index) => {
           const style = index % 2 === 0 ? { top: 300 } : { bottom: 300 };

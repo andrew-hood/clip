@@ -32,9 +32,9 @@ function VideoTemplate({ id, data }: Props) {
             inputProps={{ data: props }}
             durationInFrames={(data?.goals?.length || 0) * 12 * 30 + 12 * 30}
             fps={30}
-            compositionWidth={1920}
-            compositionHeight={1080}
-            style={{ width: "100%" }}
+            compositionWidth={480}
+            compositionHeight={820}
+            style={{ margin: "auto" }}
             controls
           />
         </Container>
