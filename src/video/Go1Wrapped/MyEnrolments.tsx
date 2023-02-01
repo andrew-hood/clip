@@ -26,7 +26,7 @@ export const MyEnrolments = ({ enrolments }: { enrolments: any[] }) => {
       </Heading>
       <Carousel slideWidth={130}>
         {enrolments.map((lo, index) => (
-          <CourseCard title={lo.title} courseImage={lo.image} />
+          <CourseCard key={index} title={lo.title} courseImage={lo.image} />
         ))}
       </Carousel>
     </AbsoluteFill>

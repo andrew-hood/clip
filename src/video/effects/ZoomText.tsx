@@ -9,7 +9,7 @@ export const ZoomText = ({ text }: { text: string | string[] }) => {
     const words = typeof text === "string" ? text.split(" ") : text;
     const duration = durationInFrames / words.length;
     return [words, duration];
-  }, [text]);
+  }, [text, durationInFrames]);
 
   const currentWordIndex = Math.min(
     Math.floor(frame / duration),

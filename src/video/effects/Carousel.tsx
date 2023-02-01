@@ -36,7 +36,7 @@ export const Carousel = ({
       style={{ transform: `translateX(${x}px)` }}
     >
       {children.map((child, index) => (
-        <div style={{ width: slideWidth + 60 }}>
+        <div key={index} style={{ width: slideWidth + 60 }}>
           <Pulse
             startFrame={timeline[index].startFrame}
             endFrame={timeline[index].endFrame}

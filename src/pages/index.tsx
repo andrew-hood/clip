@@ -21,7 +21,7 @@ const Home: NextPage = () => {
               Products
             </h2>
             <p className="mt-3 max-w-3xl text-lg text-gray-600">
-              Whether you're a professional videographer or a beginner, our
+              Whether you&apos;re a professional videographer or a beginner, our
               products empowers you to express your creativity in new and
               exciting ways. Experience the future of video production today
               with Clip
@@ -38,8 +38,8 @@ const Home: NextPage = () => {
               </div>
               <p className="mt-8 text-base text-gray-500">
                 Get a comprehensive view of your learning habits and performance
-                on other platforms. See which subjects and courses you've spent
-                the most time on and identify areas for improvement.
+                on other platforms. See which subjects and courses you&apos;ve
+                spent the most time on and identify areas for improvement.
               </p>
             </Link>
             <Link href="/sprint-shot" className="group">

@@ -68,8 +68,8 @@ export function Hero() {
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                 Introducing Clip, the revolutionary tool that allows you to
                 create stunning videos using just code. With a user-friendly
-                interface and a wide range of templates and effects, it's never
-                been easier to bring your video ideas to life.
+                interface and a wide range of templates and effects, it&apos;s
+                never been easier to bring your video ideas to life.
               </p>
             </div>
             <div className="relative mt-12 sm:mx-auto sm:max-w-lg lg:col-span-6 lg:mx-0 lg:mt-0 lg:flex lg:max-w-none lg:items-center">

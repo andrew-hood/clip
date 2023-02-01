@@ -43,7 +43,7 @@ export const Go1Wrapped = (stats: Go1StatsType) => {
         <Series.Sequence durationInFrames={4 * fps}>
           <Profile {...stats.me} />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={8 * fps}>
+        <Series.Sequence durationInFrames={6 * fps}>
           <MyEnrolments {...stats.me} />
         </Series.Sequence>
         {/* <Series.Sequence durationInFrames={4 * fps}>
